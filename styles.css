@@ -103,7 +103,7 @@ header {
     animation: 
         typing 2.5s steps(30, end) forwards,
         blink 1s step-end infinite;
-    color: #2ecc71;
+    color: #0055ff;
     text-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
 }
 
@@ -162,7 +162,7 @@ header {
 
 @keyframes blink {
     from, to { border-right-color: transparent; }
-    50% { border-right-color: #2ecc71; }
+    50% { border-right-color: #cc2e2e; }
 }
 
 .footer {
@@ -195,7 +195,7 @@ header {
 }
 
 .footer-email a:hover {
-    color: #FF5F6D;
+    color: #5f9aff;
 }
 
 .footer-links {
@@ -218,12 +218,12 @@ header {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background: linear-gradient(45deg, #FF5F6D, #FFC371);
+    background: linear-gradient(45deg, #5f9cff, #5f9cff);
     transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #FF5F6D;
+    color: #5f9cff;
 }
 
 .footer-links a:hover::after {
