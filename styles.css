@@ -15,13 +15,19 @@ body {
 
 header {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
+    right: 70px;
     z-index: 100;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Instrument Sans', Arial, sans-serif;
 }
 
 .logo {
-    width: 250px; /* Smaller logo for the menu icon */
+    width: 300px; /* Smaller logo for the menu icon */
 }
 
 .profile {
@@ -228,4 +234,17 @@ header {
 
 .footer-links a:hover::after {
     width: 100%;
+}
+
+.header-nav a {
+    margin: 0 40px;
+    text-decoration: none;
+    color: #372929;
+    font-weight: bold;
+    font-size: 1.7rem;
+
+}
+
+.header-nav a:hover {
+    color: #0055ff;
 }
