@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTitle();
     
     // Change title every 3.5 seconds
-    setInterval(updateTitle, 3500);
+    setInterval(updateTitle, 2500);
 });
