@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    width: 300px; /* Smaller logo for the menu icon */
+    width: 180px; /* Smaller logo for the menu icon */
 }
 
 .profile {
@@ -232,7 +232,8 @@ header {
     text-decoration: none;
     color: #372929;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+    
 
 }
 
