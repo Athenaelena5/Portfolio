@@ -1,0 +1,174 @@
+body {
+    font-family: 'Inter', sans-serif; /* Change font to Inter */
+    background-color: #F7F1E5; /* Light background */
+    }
+    
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 70px;
+    z-index: 100;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+}
+
+.logo {
+    width: 180px; /* Smaller logo for the menu icon */
+}
+
+.portfolio-section {
+    display: flex;
+    justify-content: center; /* Center the items */
+    margin-top: 250px; /* Increase space below the header */
+    padding: 50px;
+}
+
+.portfolio-item {
+    position: relative; /* Position relative for absolute positioning of title */
+    text-align: center;
+    margin: 0 20px; /* Reduced horizontal margin for closer spacing */
+}
+
+.portfolio-item img {
+    width: 100%; /* Make images responsive */
+    height: 400px; /* Increased fixed height for larger images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    max-width: 300px; /* Limit max width */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Scale the image slightly on hover */
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Adjust font size */
+    color: #372929; /* Text color */
+}
+
+
+.footer {
+    width: 100%;
+    background: #F7F1E5;
+    backdrop-filter: blur(5px);
+    padding: 20px 0;
+    margin-top: 100px; /* Add margin to create space between content and footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.footer-logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #44392b;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(45deg, #978978, #978978);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #9c845c;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.header-nav a {
+    margin: 0 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #372929; /* Default text color */
+    position: relative; /* Positioning for the pseudo-element */
+    overflow: hidden; /* Prevent overflow for the folding effect */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center the underline */
+    bottom: -4px; /* Position the underline below the text */
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Height of the underline */
+    background: #978978; /* Color of the underline */
+    transform: translateX(-50%) scaleX(0); /* Center and hide the underline */
+    transition: transform 0.3s ease; /* Transition for the underline */
+}
+
+.header-nav a:hover {
+    color: #978978; /* Change text color on hover */
+    transform: perspective(500px) rotateX(10deg); /* Folding effect */
+}
+
+.header-nav a:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Show the underline on hover */
+}
+
+
+/*PORTFOLIO------------------*/
+
+.see-more {
+    display: inline-block; /* Make it a block element */
+    margin-top: 50px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: #F7F1E5; /* Text color */
+    font-weight: bold; /* Bold text */
+    background-color: #3C3C3C; /* Background color */
+    padding: 8px 12px; /* Padding for the box */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color */
+}
+
+.see-more:hover {
+    background-color: #E2D9CB; /* Change background color on hover */
+    color: #5f5547; /* Change text color on hover */
+}
+
+.title {
+    margin-bottom: 60px; /* Space below the title */
+    margin-top: 20px;
+}
+
+.portfolio-title {
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    margin: 250px 0; /* Decreased space above and below the title */
+    color: #978978; /* Text color */
+    margin-bottom: -150px;
+}
