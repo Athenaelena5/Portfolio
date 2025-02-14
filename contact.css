@@ -1,0 +1,294 @@
+body {
+    font-family: 'Inter', sans-serif; /* Change font to Inter */
+    background-color: #F7F1E5; /* Light background */
+    }
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 70px;
+z-index: 100;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: 'Instrument Sans', Arial, sans-serif;
+}
+
+.logo {
+width: 180px; /* Smaller logo for the menu icon */
+}
+
+.profile {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+padding: 40px 20px;
+height: 100vh;
+}
+
+.arch-container {
+position: relative;
+width: 100%;
+min-height: 80vh; /* Change from 100vh to min-height: 80vh */
+display: flex;
+align-items: flex-end;
+justify-content: center;
+padding-bottom: 100px; /* Reduced padding */
+}
+
+.profile-content {
+position: relative;
+z-index: 2;
+text-align: center;
+}
+
+.center-logo {
+width: 500px;
+height: 500px;
+display: block;
+margin: 0 auto;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.footer {
+width: 100%;
+background: #F7F1E5;
+backdrop-filter: blur(5px);
+padding: 20px 0;
+margin-top: 100px; /* Add margin to create space between content and footer */
+}
+
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 40px;
+}
+
+.footer-logo-img {
+width: 100px;
+height: auto;
+}
+
+.footer-links {
+display: flex;
+gap: 30px;
+}
+
+.footer-links a {
+color: #44392b;
+text-decoration: none;
+font-size: 16px;
+transition: color 0.3s ease;
+position: relative;
+}
+
+.footer-links a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background: linear-gradient(45deg, #c3a86e, #91764c);
+transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+color: #9c845c;
+}
+
+.footer-links a:hover::after {
+width: 100%;
+}
+
+.header-nav a {
+margin: 0 40px;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.3rem;
+color: #372929; /* Default text color */
+position: relative; /* Positioning for the pseudo-element */
+overflow: hidden; /* Prevent overflow for the folding effect */
+transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.header-nav a::after {
+content: '';
+position: absolute;
+left: 50%; /* Center the underline */
+bottom: -4px; /* Position the underline below the text */
+width: 100%; /* Full width of the text */
+height: 2px; /* Height of the underline */
+background: #978978; /* Color of the underline */
+transform: translateX(-50%) scaleX(0); /* Center and hide the underline */
+transition: transform 0.3s ease; /* Transition for the underline */
+}
+
+.header-nav a:hover {
+color: #978978; /* Change text color on hover */
+transform: perspective(500px) rotateX(10deg); /* Folding effect */
+}
+
+.header-nav a:hover::after {
+transform: translateX(-50%) scaleX(1); /* Show the underline on hover */
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px; /* Adjusted width for smaller slideshow */
+  position: relative;
+  margin: 200px 200px; /* Increased right margin to move the container more to the right */
+  float: right; /* Keep the slideshow on the right side */
+  overflow: hidden; /* Clear floats */
+  padding-left: -40px; /* Keep padding to move slides more to the right */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Full-width images with number and caption text */
+.mySlides img {
+  width: 500px; /* Set a fixed width for the images */
+  height: 700px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the images cover the area without distortion */
+}
+
+.title-container {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 200px; /* Align with slideshow */
+}
+
+.title {
+    opacity: 0; /* Start hidden */
+    transition: opacity 1.5s ease; /* Fade effect */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: right; /* Align text to the right */
+    margin-top: -200px; /* Move the title higher */
+}
+
+.title.active {
+    opacity: 1; /* Show active title */
+}
+
+.content-container {
+    width: 100%; /* Sørg for, at containeren fylder hele bredden */
+    padding: 20px; /* Tilføj lidt padding */
+}
+
+.slideshow-container {
+    max-width: 600px; /* Behold den justerede bredde for slideshowet */
+    margin-right: 20px; /* Tilføj margin til højre for afstand til teksten */
+}
+
+.text-container {
+    flex: 1; /* Make the text container flexible to fill the remaining space */
+    padding: 50px; /* Add padding for some internal space */
+    margin-left: 20px; /* Add margin to the left for space from the slideshow */
+}
+
+.dots-container {
+    text-align: center; /* Center the dots */
+    margin-top: 10px; /* Add some space above the dots */
+}
+
+/* Existing dot styles */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ac0a0a; /* Ensure this color is visible */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ba1515; /* Ensure this color is visible */
+}

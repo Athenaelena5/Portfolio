@@ -5,7 +5,7 @@ body {
     
 
 header {
-    position: fixed;
+    position: flex;
     top: 0;
     left: 0;
     right: 70px;
@@ -24,8 +24,8 @@ header {
 .portfolio-section {
     display: flex;
     justify-content: center; /* Center the items */
-    margin-top: 250px; /* Increase space below the header */
-    padding: 50px;
+    margin-top: 100px; /* Increase space below the header */
+    padding: 200px;
 }
 
 .portfolio-item {
@@ -168,7 +168,20 @@ header {
     text-align: center; /* Center the title */
     font-size: 2.5rem; /* Font size */
     font-weight: bold; /* Bold text */
-    margin: 250px 0; /* Decreased space above and below the title */
-    color: #978978; /* Text color */
+    margin: 90px 0; /* Adjusted space above and below the title */
+    color: #5f5242; /* Text color */
     margin-bottom: -150px;
+    animation: fadeIn 1s ease; /* Added animation */
+}
+
+/* New keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End in original position */
+    }
 }
